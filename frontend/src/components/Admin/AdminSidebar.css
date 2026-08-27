@@ -1,0 +1,413 @@
+/* =========================================
+   ADMIN SIDEBAR
+========================================= */
+
+.admin-sidebar {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 280px;
+  height: 100vh;
+
+  background: #ffffff;
+
+  border-right: 1px solid #e5e7eb;
+
+  padding: 32px 20px;
+
+  box-sizing: border-box;
+
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+}
+
+
+/* =========================================
+   SIDEBAR HEADER
+========================================= */
+
+.sidebar-header {
+  padding: 0 10px;
+
+  margin-bottom: 42px;
+}
+
+
+.sidebar-header h2 {
+  margin: 0;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  color: #4f46e5;
+
+  letter-spacing: -0.3px;
+}
+
+
+.sidebar-header p {
+  margin: 6px 0 0;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  color: #9ca3af;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.sidebar-navigation {
+  width: 100%;
+}
+
+
+.sidebar-navigation ul {
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* =========================================
+   MENU ITEM
+========================================= */
+
+.sidebar-navigation li {
+  width: 100%;
+}
+
+
+/* =========================================
+   MENU LINK
+========================================= */
+
+.sidebar-navigation li a {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 13px 15px;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  color: #4b5563;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  border-radius: 10px;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.sidebar-icon {
+  width: 20px;
+
+  height: 20px;
+
+  margin-right: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #6b7280;
+
+  flex-shrink: 0;
+
+  transition: color 0.2s ease;
+}
+
+
+.sidebar-icon svg {
+  width: 18px;
+
+  height: 18px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.sidebar-label {
+  line-height: 1;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.sidebar-navigation li a:hover {
+  background: #f5f3ff;
+
+  color: #4f46e5;
+
+  transform: translateX(3px);
+}
+
+
+.sidebar-navigation li a:hover .sidebar-icon {
+  color: #4f46e5;
+}
+
+
+/* =========================================
+   ACTIVE MENU
+========================================= */
+
+.sidebar-navigation li a.active {
+  background: #4f46e5;
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 4px 12px rgba(79, 70, 229, 0.18);
+
+  transform: none;
+}
+
+
+.sidebar-navigation li a.active .sidebar-icon {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   ACTIVE HOVER
+========================================= */
+
+.sidebar-navigation li a.active:hover {
+  background: #4338ca;
+
+  color: #ffffff;
+
+  transform: none;
+}
+
+
+.sidebar-navigation li a.active:hover .sidebar-icon {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.admin-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.admin-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+
+  border-radius: 10px;
+}
+
+
+.admin-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .admin-sidebar {
+    width: 230px;
+
+    padding: 28px 15px;
+  }
+
+
+  .sidebar-header {
+    padding: 0 8px;
+
+    margin-bottom: 32px;
+  }
+
+
+  .sidebar-header h2 {
+    font-size: 22px;
+  }
+
+
+  .sidebar-header p {
+    font-size: 11px;
+  }
+
+
+  .sidebar-navigation li a {
+    min-height: 45px;
+
+    padding: 12px;
+
+    font-size: 14px;
+  }
+
+
+  .sidebar-icon {
+    width: 18px;
+
+    height: 18px;
+
+    margin-right: 12px;
+  }
+
+
+  .sidebar-icon svg {
+    width: 17px;
+
+    height: 17px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .admin-sidebar {
+    position: relative;
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: auto;
+
+    padding: 20px 15px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    overflow: visible;
+  }
+
+
+  .sidebar-header {
+    margin-bottom: 20px;
+
+    padding: 0 5px;
+  }
+
+
+  .sidebar-header h2 {
+    font-size: 21px;
+  }
+
+
+  .sidebar-navigation ul {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+  }
+
+
+  .sidebar-navigation li {
+    width: auto;
+  }
+
+
+  .sidebar-navigation li a {
+    width: auto;
+
+    min-height: 42px;
+
+    padding: 10px 12px;
+  }
+
+
+  .sidebar-icon {
+    margin-right: 8px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .sidebar-navigation li a {
+    padding: 9px 10px;
+
+    font-size: 13px;
+  }
+
+
+  .sidebar-icon {
+    width: 17px;
+
+    height: 17px;
+
+    margin-right: 7px;
+  }
+
+
+  .sidebar-icon svg {
+    width: 15px;
+
+    height: 15px;
+  }
+}

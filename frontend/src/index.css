@@ -1,0 +1,37 @@
+body{
+    background:#f5f7fb;
+    color:#111827;
+    transition:.3s;
+}
+
+body.dark{
+    background:#0f172a;
+    color:white;
+}
+
+body.dark .news-card,
+body.dark .stat-card,
+body.dark .history-card,
+body.dark .prediction-card{
+    background:#1e293b;
+    color:white;
+}
+
+body.dark textarea{
+    background:#334155;
+    color:white;
+    border:1px solid #475569;
+}
+
+body.dark input{
+    background:#334155;
+    color:white;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark span{
+    color:white;
+}

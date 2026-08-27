@@ -1,0 +1,364 @@
+/* =========================================
+   ADMIN SETTINGS PAGE
+========================================= */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f6fb;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.admin-content {
+  flex: 1;
+  margin-left: 300px;
+  padding: 45px 35px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.settings-header {
+  margin-bottom: 28px;
+}
+
+.settings-header h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.settings-header p {
+  margin-top: 7px;
+  margin-bottom: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+
+/* =========================================
+   SETTINGS CARD
+========================================= */
+
+.settings-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 24px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 5px 20px rgba(31, 41, 55, 0.08);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.settings-card-header {
+  padding: 24px 26px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.settings-card-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.settings-card-header p {
+  margin: 6px 0 0;
+
+  font-size: 14px;
+
+  color: #6b7280;
+}
+
+
+/* =========================================
+   SETTINGS FORM
+========================================= */
+
+.settings-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+
+  padding: 28px 26px;
+}
+
+
+/* =========================================
+   SETTINGS FIELD
+========================================= */
+
+.settings-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.settings-field label {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.settings-field input {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  background: #f9fafb;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+
+/* =========================================
+   READ ONLY INPUT
+========================================= */
+
+.settings-field input:read-only {
+  background: #f8f9ff;
+
+  color: #6b7280;
+
+  cursor: default;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.settings-field input:focus {
+  border-color: #7c3aed;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.08);
+}
+
+
+/* =========================================
+   PASSWORD SECTION
+========================================= */
+
+.settings-password {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding: 28px 26px;
+}
+
+.settings-password .settings-field {
+  max-width: 600px;
+}
+
+
+/* =========================================
+   PASSWORD INPUT
+========================================= */
+
+.password-input {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.password-input input {
+  padding-right: 75px;
+}
+
+.password-input button {
+  position: absolute;
+
+  right: 10px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #6d28d9;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 6px 8px;
+}
+
+.password-input button:hover {
+  color: #4c1d95;
+}
+
+
+/* =========================================
+   CHANGE PASSWORD BUTTON
+========================================= */
+
+.save-password-btn {
+  width: fit-content;
+
+  padding: 11px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #7c3aed;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.save-password-btn:hover {
+  background: #6d28d9;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+
+/* =========================================
+   ACCOUNT SECTION
+========================================= */
+
+.account-card {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   LOGOUT BUTTON
+========================================= */
+
+.logout-btn {
+  margin: 24px 26px;
+
+  padding: 11px 22px;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 8px;
+
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #fee2e2;
+
+  border-color: #fca5a5;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .admin-content {
+    margin-left: 250px;
+
+    padding: 35px 25px;
+  }
+
+  .settings-form {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .admin-content {
+    margin-left: 0;
+
+    padding: 25px 15px;
+  }
+
+  .settings-header h1 {
+    font-size: 28px;
+  }
+
+  .settings-card-header {
+    padding: 20px;
+  }
+
+  .settings-form {
+    padding: 22px 20px;
+  }
+
+  .settings-password {
+    padding: 22px 20px;
+  }
+
+  .logout-btn {
+    margin: 20px;
+  }
+
+}

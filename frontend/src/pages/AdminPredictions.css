@@ -1,0 +1,384 @@
+/* =========================================
+   ADMIN PREDICTIONS PAGE
+========================================= */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f6fb;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.admin-content {
+  flex: 1;
+  margin-left: 300px;
+  padding: 45px 35px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.predictions-header {
+  margin-bottom: 28px;
+}
+
+.predictions-header h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.predictions-header p {
+  margin-top: 7px;
+  margin-bottom: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+.predictions-table-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 0;
+  box-shadow: 0 5px 20px rgba(31, 41, 55, 0.08);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+
+/* =========================================
+   PREDICTIONS TABLE
+========================================= */
+
+.predictions-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.predictions-table thead {
+  background: #f8f9ff;
+}
+
+.predictions-table th {
+  padding: 18px 22px;
+  text-align: left;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #374151;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.predictions-table td {
+  padding: 18px 22px;
+
+  font-size: 14px;
+  color: #4b5563;
+
+  border-bottom: 1px solid #edf0f5;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================
+   ROW HOVER
+========================================= */
+
+.predictions-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.predictions-table tbody tr:hover {
+  background: #f8f9ff;
+}
+
+
+/* =========================================
+   LAST ROW
+========================================= */
+
+.predictions-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   ID
+========================================= */
+
+.predictions-table td:first-child {
+  font-weight: 600;
+  color: #6b7280;
+}
+
+
+/* =========================================
+   NEWS
+========================================= */
+
+.prediction-news {
+  max-width: 450px;
+  line-height: 1.5;
+  color: #374151;
+}
+
+
+/* =========================================
+   PREDICTION BADGE
+========================================= */
+
+.prediction-badge {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   REAL NEWS
+========================================= */
+
+.prediction-badge.real {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+
+/* =========================================
+   FAKE NEWS
+========================================= */
+
+.prediction-badge.fake {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+
+/* =========================================
+   SCORE
+========================================= */
+
+.prediction-score {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.prediction-date {
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.predictions-loading {
+  padding: 60px 30px;
+
+  text-align: center;
+
+  color: #6b7280;
+  font-size: 16px;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.predictions-empty {
+  padding: 60px 30px;
+
+  text-align: center;
+
+  color: #6b7280;
+  font-size: 16px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .admin-content {
+    margin-left: 250px;
+    padding: 35px 25px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .admin-content {
+    margin-left: 0;
+    padding: 25px 15px;
+  }
+
+  .predictions-header h1 {
+    font-size: 28px;
+  }
+
+}
+
+
+/* =========================================
+   PREDICTIONS SEARCH BAR
+========================================= */
+
+.predictions-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  width: 100%;
+}
+
+.predictions-search-input {
+  flex: 1;
+  max-width: 500px;
+  height: 44px;
+
+  padding: 0 16px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #111827;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.predictions-search-input::placeholder {
+  color: #9ca3af;
+}
+
+.predictions-search-input:focus {
+  border-color: #7c3aed;
+
+  box-shadow:
+    0 0 0 3px rgba(124, 58, 237, 0.08);
+}
+
+/* =========================================
+   PREDICTIONS FILTER DROPDOWN
+========================================= */
+
+.predictions-filter {
+  height: 44px;
+  min-width: 170px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.predictions-filter:focus {
+  border-color: #7c3aed;
+
+  box-shadow:
+    0 0 0 3px rgba(124, 58, 237, 0.08);
+}
+
+.predictions-filter:hover {
+  border-color: #9ca3af;
+}
+
+/* =========================================
+   DELETE PREDICTION BUTTON
+========================================= */
+
+.delete-prediction-btn {
+  border: none;
+
+  background: #fee2e2;
+  color: #dc2626;
+
+  padding: 7px 14px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.delete-prediction-btn:hover {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.delete-prediction-btn:active {
+  transform: scale(0.97);
+}

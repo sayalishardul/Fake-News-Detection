@@ -1,0 +1,249 @@
+/* =========================================
+   RECENT USERS
+========================================= */
+
+.recent-users {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 5px 20px rgba(31, 41, 55, 0.07);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.recent-users-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 22px 24px 18px;
+
+  border-bottom: 1px solid #edf0f5;
+
+  background: #ffffff;
+}
+
+
+.recent-users-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+.recent-users-header p {
+  margin: 6px 0 0;
+
+  font-size: 14px;
+
+  color: #6b7280;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.recent-users-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.recent-users-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 650px;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.recent-users-table thead {
+  background: #f8f9ff;
+}
+
+
+.recent-users-table th {
+  padding: 15px 20px;
+
+  text-align: left;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: #374151;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.recent-users-table td {
+  padding: 16px 20px;
+
+  font-size: 14px;
+
+  color: #4b5563;
+
+  border-bottom: 1px solid #edf0f5;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================
+   ROW HOVER
+========================================= */
+
+.recent-users-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+
+.recent-users-table tbody tr:hover {
+  background: #f8f9ff;
+}
+
+
+/* =========================================
+   LAST ROW
+========================================= */
+
+.recent-users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   ID
+========================================= */
+
+.recent-user-id {
+  font-weight: 600;
+
+  color: #6b7280;
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.recent-user-name {
+  font-weight: 600;
+
+  color: #111827;
+}
+
+
+/* =========================================
+   USERNAME
+========================================= */
+
+.recent-username-badge {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  background: #f1edff;
+
+  color: #6d28d9;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   EMAIL
+========================================= */
+
+.recent-user-email {
+  color: #4b5563;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   LOADING / EMPTY
+========================================= */
+
+.recent-users-message {
+  padding: 45px 25px;
+
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .recent-users-header {
+    padding: 18px;
+  }
+
+
+  .recent-users-header h2 {
+    font-size: 18px;
+  }
+
+
+  .recent-users-header p {
+    font-size: 13px;
+  }
+
+
+  .recent-users-table th,
+  .recent-users-table td {
+    padding: 14px 16px;
+  }
+
+}

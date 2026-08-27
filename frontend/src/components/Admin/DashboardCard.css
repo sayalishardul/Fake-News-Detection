@@ -1,0 +1,217 @@
+/* =========================================
+   DASHBOARD CARD
+========================================= */
+
+.dashboard-card {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 145px;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  border-top: 4px solid var(--card-color);
+
+  padding: 22px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 5px 18px rgba(31, 41, 55, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 9px 25px rgba(31, 41, 55, 0.12);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.card-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  height: 100%;
+}
+
+
+/* =========================================
+   CARD INFORMATION
+========================================= */
+
+.card-info {
+  min-width: 0;
+}
+
+
+.dashboard-card-title {
+  margin: 0 0 14px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #6b7280;
+}
+
+
+.dashboard-card-value {
+  margin: 0;
+
+  font-size: 34px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.dashboard-icon {
+  width: 52px;
+
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 12px;
+
+  font-size: 25px;
+
+  transition:
+    transform 0.2s ease;
+}
+
+
+/* =========================================
+   ICON HOVER
+========================================= */
+
+.dashboard-card:hover .dashboard-icon {
+  transform: scale(1.08);
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .dashboard-card {
+  background: #1e293b;
+
+  border-color: #334155;
+
+  border-top-color: var(--card-color);
+}
+
+
+body.dark .dashboard-card-title {
+  color: #94a3b8;
+}
+
+
+body.dark .dashboard-card-value {
+  color: #f8fafc;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .dashboard-card {
+    min-height: 135px;
+
+    padding: 20px;
+  }
+
+
+  .dashboard-card-value {
+    font-size: 30px;
+  }
+
+
+  .dashboard-icon {
+    width: 48px;
+
+    height: 48px;
+
+    font-size: 22px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .dashboard-card {
+    min-height: 125px;
+
+    padding: 18px;
+  }
+
+
+  .dashboard-card-title {
+    font-size: 13px;
+
+    margin-bottom: 10px;
+  }
+
+
+  .dashboard-card-value {
+    font-size: 28px;
+  }
+
+
+  .dashboard-icon {
+    width: 44px;
+
+    height: 44px;
+
+    font-size: 20px;
+
+    border-radius: 10px;
+  }
+
+}

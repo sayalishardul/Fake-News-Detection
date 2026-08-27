@@ -1,0 +1,35 @@
+.admin-navbar{
+
+    height:70px;
+
+    background:#4F46E5;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 35px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+}
+
+.admin-navbar h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}

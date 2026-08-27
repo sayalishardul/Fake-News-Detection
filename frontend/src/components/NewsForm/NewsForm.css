@@ -1,0 +1,552 @@
+/* ==========================================
+   NEWS FORM WRAPPER
+========================================== */
+
+.news-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   MAIN CARD
+========================================== */
+
+.news-card {
+    width: 100%;
+    max-width: 1100px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    padding: 32px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.news-card:hover {
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.11);
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.news-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 24px;
+}
+
+.news-icon {
+    width: 54px;
+    height: 54px;
+
+    min-width: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-radius: 14px;
+
+    font-size: 23px;
+}
+
+.news-header h2 {
+    margin: 0 0 6px 0;
+
+    color: #1e293b;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.news-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   INFO BAR
+========================================== */
+
+.news-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+    padding: 13px 16px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.info-item svg {
+    color: #2563eb;
+}
+
+
+/* ==========================================
+   INPUT SECTION
+========================================== */
+
+.news-input-section {
+    width: 100%;
+}
+
+.input-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 9px;
+}
+
+.input-label-row label {
+    color: #334155;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.input-label-row span {
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+.news-card textarea {
+    width: 100%;
+
+    min-height: 210px;
+
+    resize: vertical;
+
+    box-sizing: border-box;
+
+    border: 1.5px solid #cbd5e1;
+
+    border-radius: 13px;
+
+    padding: 16px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.news-card textarea::placeholder {
+    color: #94a3b8;
+}
+
+.news-card textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+.news-card textarea:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.7;
+}
+
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.news-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.detect-btn {
+    flex: 1;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    border: none;
+
+    padding: 14px 20px;
+
+    border-radius: 11px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+}
+
+.detect-btn:hover:not(:disabled) {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+}
+
+.detect-btn:disabled {
+    background: #93c5fd;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* ==========================================
+   CLEAR BUTTON
+========================================== */
+
+.clear-news-btn {
+    min-width: 100px;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    border: 1px solid #cbd5e1;
+
+    padding: 14px 20px;
+
+    border-radius: 11px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.clear-news-btn:hover {
+    background: #e2e8f0;
+
+    border-color: #94a3b8;
+}
+
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.prediction-loading {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+.prediction-loading p {
+    margin: 12px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   RESULT SECTION
+========================================== */
+
+.prediction-result-section {
+    margin-top: 30px;
+}
+
+.result-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.result-divider::before,
+.result-divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #e2e8f0;
+}
+
+.result-divider span {
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark .news-card {
+    background: #1e293b;
+
+    border-color: #334155;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .news-header h2 {
+    color: #f8fafc;
+}
+
+body.dark .news-header p {
+    color: #cbd5e1;
+}
+
+body.dark .news-icon {
+    background: #1e3a8a;
+
+    color: #93c5fd;
+}
+
+body.dark .news-info {
+    background: #0f172a;
+
+    border-color: #334155;
+}
+
+body.dark .info-item {
+    color: #cbd5e1;
+}
+
+body.dark .input-label-row label {
+    color: #e2e8f0;
+}
+
+body.dark .input-label-row span {
+    color: #94a3b8;
+}
+
+body.dark .news-card textarea {
+    background: #0f172a;
+
+    color: #f8fafc;
+
+    border-color: #475569;
+}
+
+body.dark .news-card textarea::placeholder {
+    color: #94a3b8;
+}
+
+body.dark .news-card textarea:focus {
+    border-color: #60a5fa;
+
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.12);
+}
+
+body.dark .clear-news-btn {
+    background: #334155;
+
+    color: #e2e8f0;
+
+    border-color: #475569;
+}
+
+body.dark .clear-news-btn:hover {
+    background: #475569;
+}
+
+body.dark .prediction-loading {
+    background: #0f172a;
+
+    border-color: #334155;
+}
+
+body.dark .prediction-loading p {
+    color: #cbd5e1;
+}
+
+body.dark .result-divider {
+    color: #cbd5e1;
+}
+
+body.dark .result-divider::before,
+body.dark .result-divider::after {
+    background: #334155;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .news-wrapper {
+        margin: 25px 0;
+    }
+
+    .news-card {
+        width: 95%;
+
+        padding: 22px;
+
+        border-radius: 16px;
+    }
+
+    .news-header {
+        align-items: flex-start;
+    }
+
+    .news-header h2 {
+        font-size: 22px;
+    }
+
+    .news-header p {
+        font-size: 14px;
+    }
+
+    .news-info {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .news-card textarea {
+        min-height: 180px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .news-card {
+        width: 94%;
+
+        padding: 18px;
+    }
+
+    .news-header {
+        gap: 12px;
+    }
+
+    .news-icon {
+        width: 45px;
+        height: 45px;
+
+        min-width: 45px;
+
+        font-size: 18px;
+    }
+
+    .news-header h2 {
+        font-size: 19px;
+    }
+
+    .news-actions {
+        flex-direction: column;
+    }
+
+    .clear-news-btn {
+        width: 100%;
+    }
+}

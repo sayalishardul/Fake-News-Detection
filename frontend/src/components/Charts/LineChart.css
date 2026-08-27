@@ -1,0 +1,101 @@
+/* =========================================================
+   LINE CHART
+========================================================= */
+
+.line-chart-container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.line-chart-title {
+  margin-bottom: 15px;
+
+  text-align: left;
+}
+
+.line-chart-title h2 {
+  margin: 0 0 5px;
+
+  font-size: 19px;
+  font-weight: 750;
+
+  color: #0f172a;
+}
+
+.line-chart-title p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+
+/* =========================================================
+   CHART
+========================================================= */
+
+.line-chart-wrapper {
+  width: 100%;
+  height: 310px;
+
+  position: relative;
+
+  flex: 1;
+
+  min-height: 0;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.line-chart-empty {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #94a3b8;
+}
+
+.line-chart-empty span {
+  font-size: 35px;
+
+  margin-bottom: 10px;
+}
+
+.line-chart-empty p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.dark .line-chart-title h2 {
+  color: #f8fafc;
+}
+
+.dark .line-chart-title p {
+  color: #94a3b8;
+}

@@ -1,0 +1,237 @@
+import "./PredictionCard.css";
+
+import {
+  FaCheckCircle,
+  FaTimesCircle,
+  FaChartLine,
+  FaCalendarAlt,
+  FaShieldAlt,
+} from "react-icons/fa";
+
+function PredictionCard({ result }) {
+  if (!result) return null;
+
+  const score = Number(result.score) || 0;
+
+  /*
+   * Convert model score into a display percentage.
+   * Keeping your existing score logic so the backend
+   * does not need to be changed.
+   */
+  let confidence = Math.abs(score) * 20;
+
+  if (confidence > 100) {
+    confidence = 100;
+  }
+
+  confidence = Number(confidence.toFixed(1));
+
+  const isReal = result.prediction === "Real";
+
+  const predictionDate = result.created_at
+    ? new Date(result.created_at).toLocaleString()
+    : new Date().toLocaleString();
+
+  return (
+    <div
+      className={`prediction-card ${
+        isReal ? "real-card" : "fake-card"
+      }`}
+    >
+      {/* ==========================================
+          CARD HEADER
+      ========================================== */}
+
+      <div className="prediction-card-header">
+
+        <div className="prediction-title">
+
+          <div className="prediction-title-icon">
+            {isReal ? (
+              <FaCheckCircle />
+            ) : (
+              <FaTimesCircle />
+            )}
+          </div>
+
+          <div>
+            <h2>Prediction Result</h2>
+
+            <p>
+              AI analysis of the submitted news content
+            </p>
+          </div>
+
+        </div>
+
+        <div
+          className={`prediction-status ${
+            isReal ? "status-real" : "status-fake"
+          }`}
+        >
+          {isReal ? "Verified Result" : "Suspicious Result"}
+        </div>
+
+      </div>
+
+
+      {/* ==========================================
+          MAIN RESULT
+      ========================================== */}
+
+      <div className="prediction-main">
+
+        <div
+          className={`prediction-icon ${
+            isReal
+              ? "prediction-icon-real"
+              : "prediction-icon-fake"
+          }`}
+        >
+          {isReal ? (
+            <FaCheckCircle />
+          ) : (
+            <FaTimesCircle />
+          )}
+        </div>
+
+        <h1
+          className={
+            isReal
+              ? "real-text"
+              : "fake-text"
+          }
+        >
+          {isReal
+            ? "REAL NEWS"
+            : "FAKE NEWS"}
+        </h1>
+
+        <p className="prediction-description">
+          {isReal
+            ? "The submitted content appears to be consistent with real news."
+            : "The submitted content appears suspicious and may contain misleading information."}
+        </p>
+
+      </div>
+
+
+      {/* ==========================================
+          CONFIDENCE
+      ========================================== */}
+
+      <div className="confidence-section">
+
+        <div className="confidence-header">
+
+          <div className="confidence-label">
+            <FaChartLine />
+
+            <span>
+              Prediction Confidence
+            </span>
+          </div>
+
+          <strong>
+            {confidence}%
+          </strong>
+
+        </div>
+
+        <div className="confidence-bar">
+
+          <div
+            className={`confidence-fill ${
+              isReal
+                ? "real-fill"
+                : "fake-fill"
+            }`}
+            style={{
+              width: `${confidence}%`,
+            }}
+          />
+
+        </div>
+
+        <div className="confidence-scale">
+          <span>0%</span>
+          <span>50%</span>
+          <span>100%</span>
+        </div>
+
+      </div>
+
+
+      {/* ==========================================
+          INFORMATION
+      ========================================== */}
+
+      <div className="prediction-info">
+
+        <div className="prediction-info-item">
+
+          <div
+            className={`info-icon ${
+              isReal
+                ? "info-real"
+                : "info-fake"
+            }`}
+          >
+            <FaShieldAlt />
+          </div>
+
+          <div>
+            <span className="info-label">
+              Status
+            </span>
+
+            <strong>
+              {isReal
+                ? "Analysis Completed"
+                : "Suspicious Content"}
+            </strong>
+          </div>
+
+        </div>
+
+
+        <div className="prediction-info-item">
+
+          <div className="info-icon info-blue">
+            <FaCalendarAlt />
+          </div>
+
+          <div>
+            <span className="info-label">
+              Analysis Date
+            </span>
+
+            <strong>
+              {predictionDate}
+            </strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* ==========================================
+          DISCLAIMER
+      ========================================== */}
+
+      <div className="prediction-disclaimer">
+        <FaShieldAlt />
+
+        <span>
+          This prediction is generated by a machine
+          learning model and should be used as an
+          informational reference.
+        </span>
+      </div>
+
+    </div>
+  );
+}
+
+export default PredictionCard;

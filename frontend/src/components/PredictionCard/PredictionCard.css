@@ -1,0 +1,748 @@
+/* ==========================================
+   MAIN CARD
+========================================== */
+
+.prediction-card {
+    width: 100%;
+
+    margin-top: 28px;
+
+    padding: 28px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+
+    animation: predictionFade 0.45s ease;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   TOP BORDER
+========================================== */
+
+.real-card {
+    border-top: 4px solid #22c55e;
+}
+
+.fake-card {
+    border-top: 4px solid #ef4444;
+}
+
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes predictionFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.prediction-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+}
+
+
+.prediction-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.prediction-title-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 19px;
+
+}
+
+
+.prediction-title h2 {
+
+    margin: 0 0 4px;
+
+    color: #1e293b;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+.prediction-title p {
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+/* ==========================================
+   STATUS BADGE
+========================================== */
+
+.prediction-status {
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+
+.status-real {
+
+    color: #15803d;
+
+    background: #dcfce7;
+
+}
+
+
+.status-fake {
+
+    color: #b91c1c;
+
+    background: #fee2e2;
+
+}
+
+
+/* ==========================================
+   MAIN RESULT
+========================================== */
+
+.prediction-main {
+
+    text-align: center;
+
+    padding: 28px 15px 24px;
+
+}
+
+
+.prediction-icon {
+
+    width: 76px;
+
+    height: 76px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 45px;
+
+}
+
+
+.prediction-icon-real {
+
+    color: #16a34a;
+
+    background: #dcfce7;
+
+}
+
+
+.prediction-icon-fake {
+
+    color: #dc2626;
+
+    background: #fee2e2;
+
+}
+
+
+.prediction-main h1 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.real-text {
+
+    color: #16a34a;
+
+}
+
+
+.fake-text {
+
+    color: #dc2626;
+
+}
+
+
+.prediction-description {
+
+    max-width: 650px;
+
+    margin: 10px auto 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ==========================================
+   CONFIDENCE SECTION
+========================================== */
+
+.confidence-section {
+
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+}
+
+
+.confidence-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 11px;
+
+}
+
+
+.confidence-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.confidence-label svg {
+
+    color: #2563eb;
+
+}
+
+
+.confidence-header strong {
+
+    color: #1e293b;
+
+    font-size: 18px;
+
+}
+
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.confidence-bar {
+
+    width: 100%;
+
+    height: 11px;
+
+    background: #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.confidence-fill {
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    transition: width 0.8s ease;
+
+}
+
+
+.real-fill {
+
+    background: #22c55e;
+
+}
+
+
+.fake-fill {
+
+    background: #ef4444;
+
+}
+
+
+.confidence-scale {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 7px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+}
+
+
+/* ==========================================
+   INFORMATION
+========================================== */
+
+.prediction-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+}
+
+
+.prediction-info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 13px;
+
+}
+
+
+.info-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    min-width: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+}
+
+
+.info-real {
+
+    color: #16a34a;
+
+    background: #dcfce7;
+
+}
+
+
+.info-fake {
+
+    color: #dc2626;
+
+    background: #fee2e2;
+
+}
+
+
+.info-blue {
+
+    color: #2563eb;
+
+    background: #dbeafe;
+
+}
+
+
+.prediction-info-item div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+
+}
+
+
+.info-label {
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+}
+
+
+.prediction-info-item strong {
+
+    color: #334155;
+
+    font-size: 14px;
+
+}
+
+
+/* ==========================================
+   DISCLAIMER
+========================================== */
+
+.prediction-disclaimer {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+    padding: 12px 14px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+.prediction-disclaimer svg {
+
+    margin-top: 2px;
+
+    min-width: 13px;
+
+    color: #64748b;
+
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark .prediction-card {
+
+    background: #1e293b;
+
+    border-color: #334155;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+}
+
+
+body.dark .prediction-card-header {
+
+    border-color: #334155;
+
+}
+
+
+body.dark .prediction-title h2 {
+
+    color: #f8fafc;
+
+}
+
+
+body.dark .prediction-title p {
+
+    color: #94a3b8;
+
+}
+
+
+body.dark .prediction-title-icon {
+
+    background: #1e3a8a;
+
+    color: #93c5fd;
+
+}
+
+
+body.dark .prediction-description {
+
+    color: #94a3b8;
+
+}
+
+
+body.dark .confidence-section {
+
+    background: #0f172a;
+
+    border-color: #334155;
+
+}
+
+
+body.dark .confidence-label {
+
+    color: #cbd5e1;
+
+}
+
+
+body.dark .confidence-header strong {
+
+    color: #f8fafc;
+
+}
+
+
+body.dark .confidence-bar {
+
+    background: #334155;
+
+}
+
+
+body.dark .prediction-info-item {
+
+    background: #0f172a;
+
+    border-color: #334155;
+
+}
+
+
+body.dark .prediction-info-item strong {
+
+    color: #e2e8f0;
+
+}
+
+
+body.dark .prediction-disclaimer {
+
+    background: #0f172a;
+
+    color: #94a3b8;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .prediction-card {
+
+        padding: 20px;
+
+    }
+
+
+    .prediction-card-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .prediction-status {
+
+        align-self: flex-start;
+
+    }
+
+
+    .prediction-info {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .prediction-card {
+
+        padding: 16px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .prediction-title h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .prediction-title p {
+
+        font-size: 12px;
+
+    }
+
+
+    .prediction-main {
+
+        padding: 22px 5px;
+
+    }
+
+
+    .prediction-icon {
+
+        width: 65px;
+
+        height: 65px;
+
+        font-size: 37px;
+
+    }
+
+
+    .prediction-main h1 {
+
+        font-size: 23px;
+
+    }
+
+
+    .confidence-section {
+
+        padding: 15px;
+
+    }
+
+}

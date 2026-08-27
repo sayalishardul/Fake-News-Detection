@@ -1,0 +1,269 @@
+/* =========================================
+   RECENT PREDICTIONS
+========================================= */
+
+.recent-predictions {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 5px 20px rgba(31, 41, 55, 0.07);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.recent-predictions-header {
+  padding: 24px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+.recent-predictions-header h2 {
+  margin: 0;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+.recent-predictions-header p {
+  margin: 6px 0 0;
+
+  font-size: 14px;
+
+  color: #6b7280;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.recent-predictions-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.recent-predictions table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 700px;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.recent-predictions th {
+  padding: 14px 20px;
+
+  text-align: left;
+
+  background: #f8fafc;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* =========================================
+   TABLE DATA
+========================================= */
+
+.recent-predictions td {
+  padding: 16px 20px;
+
+  font-size: 14px;
+
+  color: #374151;
+
+  border-bottom: 1px solid #edf0f4;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================
+   ROW HOVER
+========================================= */
+
+.recent-predictions tbody tr:hover {
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   NEWS
+========================================= */
+
+.news-cell {
+  max-width: 500px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   REAL BADGE
+========================================= */
+
+.prediction-real {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 78px;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  background: #dcfce7;
+
+  color: #15803d;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FAKE BADGE
+========================================= */
+
+.prediction-fake {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 78px;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   SCORE
+========================================= */
+
+.score-cell {
+  font-weight: 600;
+
+  color: #374151;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.no-predictions {
+  text-align: center;
+
+  padding: 35px 20px !important;
+
+  color: #6b7280 !important;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .recent-predictions {
+  background: #1e293b;
+
+  border-color: #334155;
+}
+
+
+body.dark .recent-predictions-header h2 {
+  color: #f8fafc;
+}
+
+
+body.dark .recent-predictions-header p {
+  color: #94a3b8;
+}
+
+
+body.dark .recent-predictions th {
+  background: #273449;
+
+  color: #e5e7eb;
+
+  border-color: #334155;
+}
+
+
+body.dark .recent-predictions td {
+  color: #d1d5db;
+
+  border-color: #334155;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .recent-predictions-header {
+    padding: 20px;
+  }
+
+  .recent-predictions-header h2 {
+    font-size: 19px;
+  }
+
+}

@@ -1,0 +1,766 @@
+/* =========================================================
+   HISTORY SECTION
+========================================================= */
+
+.history {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 45px auto 60px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.history-wrapper {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.history-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.history-title h2 {
+  margin: 0 0 6px;
+
+  color: #0f172a;
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+.history-title p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CLEAR BUTTON
+========================================================= */
+
+.clear-btn {
+  flex-shrink: 0;
+
+  border: none;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  padding: 10px 16px;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition: all 0.2s ease;
+}
+
+.clear-btn:hover {
+  background: #fecaca;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.history-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.history-search {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+.history-search input {
+  width: 100%;
+
+  height: 44px;
+
+  box-sizing: border-box;
+
+  padding: 0 42px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.history-search input::placeholder {
+  color: #94a3b8;
+}
+
+.history-search input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+
+  left: 14px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  font-size: 15px;
+}
+
+.search-clear {
+  position: absolute;
+
+  right: 10px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 25px;
+  height: 25px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #e2e8f0;
+
+  color: #475569;
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  line-height: 20px;
+}
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+.history-filter {
+  height: 44px;
+
+  min-width: 175px;
+
+  padding: 0 14px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  outline: none;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.history-filter:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   ACTION ROW
+========================================================= */
+
+.history-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+.history-result-count {
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.history-result-count strong {
+  color: #334155;
+}
+
+
+/* =========================================================
+   EXPORT BUTTONS
+========================================================= */
+
+.export-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.pdf-btn,
+.csv-btn {
+  border: none;
+
+  padding: 9px 15px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition: all 0.2s ease;
+}
+
+.pdf-btn {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+.csv-btn {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.pdf-btn:hover {
+  background: #fecaca;
+
+  transform: translateY(-1px);
+}
+
+.csv-btn:hover {
+  background: #bbf7d0;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   HISTORY LIST
+========================================================= */
+
+.history-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   HISTORY CARD
+========================================================= */
+
+.history-card {
+  position: relative;
+
+  padding: 20px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-left: 4px solid #94a3b8;
+
+  border-radius: 13px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+.history-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(15, 23, 42, 0.07);
+}
+
+.history-real {
+  border-left-color: #22c55e;
+}
+
+.history-fake {
+  border-left-color: #ef4444;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.history-card-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 14px;
+}
+
+.prediction-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 6px 10px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+}
+
+.real-badge {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.fake-badge {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+.history-date {
+  color: #64748b;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NEWS TEXT
+========================================================= */
+
+.news-content {
+  padding: 2px 0 15px;
+}
+
+.news-text {
+  margin: 0;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.history-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+
+/* =========================================================
+   SCORE
+========================================================= */
+
+.score-container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.score-label {
+  color: #64748b;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.score-badge {
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.real-score {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.fake-score {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.delete-btn {
+  border: none;
+
+  padding: 8px 13px;
+
+  border-radius: 7px;
+
+  background: #f1f5f9;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-history {
+  padding: 55px 20px;
+
+  text-align: center;
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 13px;
+
+  background: #f8fafc;
+}
+
+.empty-icon {
+  font-size: 38px;
+
+  margin-bottom: 10px;
+}
+
+.empty-history h3 {
+  margin: 0 0 7px;
+
+  color: #334155;
+
+  font-size: 17px;
+}
+
+.empty-history p {
+  max-width: 500px;
+
+  margin: auto;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .history-wrapper {
+  background: #111827;
+
+  border-color: #334155;
+}
+
+body.dark .history-title h2 {
+  color: #f8fafc;
+}
+
+body.dark .history-title p,
+body.dark .history-result-count,
+body.dark .history-date {
+  color: #94a3b8;
+}
+
+body.dark .history-header,
+body.dark .history-footer {
+  border-color: #334155;
+}
+
+body.dark .history-search input,
+body.dark .history-filter {
+  background: #1e293b;
+
+  border-color: #475569;
+
+  color: #f8fafc;
+}
+
+body.dark .history-card {
+  background: #1e293b;
+
+  border-color: #334155;
+}
+
+body.dark .news-text {
+  color: #cbd5e1;
+}
+
+body.dark .empty-history {
+  background: #1e293b;
+
+  border-color: #475569;
+}
+
+body.dark .empty-history h3 {
+  color: #f8fafc;
+}
+
+body.dark .empty-history p {
+  color: #94a3b8;
+}
+
+body.dark .delete-btn {
+  background: #334155;
+
+  color: #cbd5e1;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .history-wrapper {
+    padding: 22px;
+  }
+
+  .history-header {
+    align-items: flex-start;
+  }
+
+  .history-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .history-filter {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .history {
+    width: 94%;
+
+    margin-top: 30px;
+  }
+
+  .history-wrapper {
+    padding: 17px;
+
+    border-radius: 14px;
+  }
+
+  .history-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .clear-btn {
+    width: 100%;
+  }
+
+  .history-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .history-result-count {
+    text-align: left;
+  }
+
+  .export-buttons {
+    width: 100%;
+  }
+
+  .pdf-btn,
+  .csv-btn {
+    flex: 1;
+  }
+
+  .history-card-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .history-date {
+    white-space: normal;
+  }
+
+  .history-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+
+  .score-container {
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+}
