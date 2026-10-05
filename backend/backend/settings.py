@@ -49,17 +49,18 @@ DEBUG = os.environ.get(
 if DEBUG:
 
     ALLOWED_HOSTS = [
-        "127.0.0.1",
-        "localhost",
-    ]
+    "fake-news-detection-backend.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 else:
 
     ALLOWED_HOSTS = [
-        "your-domain.com",
-        "www.your-domain.com",
-    ]
-
+    "fake-news-detection-backend.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 # =========================================================
 # APPLICATIONS
